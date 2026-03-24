@@ -1,0 +1,229 @@
+@use 'variables' as *;
+@use 'navbar' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $light-bg;
+    color: $text-grey;
+    scroll-behavior: smooth;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: $white;
+    border-radius: 30px;
+
+    @include tablet {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        flex: 1;
+
+        h1 {
+            font-size: 3.5rem;
+            color: $dark-color;
+            margin-bottom: 20px;
+            line-height: 1.2;
+
+            @include mobile {
+                font-size: 2.2rem;
+            }
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+    }
+
+    .hero-image {
+        flex: 1;
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+            filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.1));
+        }
+    }
+}
+
+.products {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background: $white;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        transition: $transition;
+        box-shadow: $shadow;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        h3 {
+            margin: 15px 0 5px;
+            color: $dark-color;
+        }
+
+        .price {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.btn-main {
+    background: $primary-color;
+    color: $white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: $transition;
+    display: inline-block;
+
+    &:hover {
+        background: darken($primary-color, 10%);
+        transform: scale(1.05);
+    }
+}
+
+
+.main-footer {
+    background-color: $dark-color;
+    color: $white;
+    padding: 60px 0 20px;
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        padding: 0 20px;
+
+        @include tablet {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    .footer-info {
+        flex: 1;
+
+        .logo {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            list-style: none;
+
+            li {
+                margin-bottom: 10px;
+
+                i {
+                    color: $primary-color;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .footer-contact {
+        flex: 1;
+
+        h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            input,
+            textarea {
+                padding: 12px;
+                border-radius: 8px;
+                border: none;
+                background: rgba(255, 255, 255, 0.1);
+                color: white;
+
+                &::placeholder {
+                    color: #aaa;
+                }
+            }
+
+            .btn-send {
+                background: $primary-color;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: $transition;
+
+                &:hover {
+                    background: darken($primary-color, 10%);
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        color: #888;
+    }
+}
