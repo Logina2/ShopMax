@@ -1,0 +1,43 @@
+.my-form .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.my-form .form-group label {
+  width: 150px;
+  margin-right: 10px;
+}
+.my-form .form-group input {
+  flex: 1;
+  padding: 8px;
+}
+.my-form button {
+  width: 300px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+@media (max-width: 768px) {
+  .my-form .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .my-form .form-group label {
+    width: auto;
+    margin-bottom: 5px;
+  }
+  .my-form button {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .my-form button {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=mystyle.css.map */
