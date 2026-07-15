@@ -4,109 +4,654 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopMax - Your premium destination for modern shopping. Discover the latest 2026 collection with unbeatable prices and fast delivery.">
     <title>ShopMax | Modern Shopping Store</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
+    <div class="announcement-bar">
+        <div class="container">
+            <p><i class="fas fa-truck-fast"></i> Free shipping on orders over $50 &nbsp;|&nbsp; <i class="fas fa-rotate-left"></i> 30-day easy returns &nbsp;|&nbsp; <i class="fas fa-tag"></i> Use code <strong>SUMMER26</strong> for 15% off</p>
+        </div>
+    </div>
+
     <header class="main-header">
         <nav class="navbar">
             <div class="logo">Shop<span>Max</span></div>
+
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#products">Shop</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#features">Why Us</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+
             <div class="nav-icons">
-                <i class="fas fa-search"></i>
-                <div class="cart-icon" style="position: relative; display: inline-block;">
+                <button class="icon-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="icon-btn cart-icon" aria-label="Shopping cart">
                     <i class="fas fa-shopping-bag"></i>
-                    <span
-                        style="position: absolute; top: -8px; right: -10px; background: #ff6b6b; color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 50%;">3</span>
-                </div>
+                    <span class="cart-badge">0</span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Upgrade Your <span>Style</span> Today.</h1>
-            <p>Experience the future of shopping with our new 2026 collection. High quality, best prices, and fast
-                delivery to your doorstep.</p>
-            <a href="#products" class="btn-main">Shop Now</a>
-        </div>
-        <div class="hero-image">
-            <img src="images/photo-1523275335684-37898b6baf30.avif" alt="New Collection 2026">
-        </div>
-    </section>
+    <main>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="hero-content reveal">
+                <p class="hero-tag">New Collection 2026</p>
+                <h1>Upgrade Your <span>Style</span> Today.</h1>
+                <p class="hero-description">Experience the future of shopping with our curated collection. Premium quality, best prices, and fast delivery to your doorstep.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                    <a href="#features" class="btn-outline">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>500+</strong>
+                        <span>Products</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <strong>10K+</strong>
+                        <span>Happy Customers</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <strong>4.9</strong>
+                        <span>Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image reveal">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700&h=700&fit=crop" alt="ShopMax premium fashion collection showcase">
+            </div>
+        </section>
 
-    <section id="products" class="products">
-        <h2 style="text-align: center; margin-bottom: 40px; color: #2d3436; font-size: 2.5rem;">Featured Products</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="images/red.avif" alt="Red Sneakers">
-                <h3>Red Sneakers</h3>
-                <p class="price">$120.00</p>
-            </div>
-            <div class="card">
-                <img src="images/classsic.avif" alt="Classic Watch">
-                <h3>Classic Watch</h3>
-                <p class="price">$85.00</p>
-            </div>
-            <div class="card">
-                <img src="images/headphone.avif" alt="Headphones">
-                <h3>Pro Headphones</h3>
-                <p class="price">$150.00</p>
+        <!-- Marquee Brands -->
+        <div class="brand-bar">
+            <div class="container">
+                <p class="brand-label">Trusted by leading brands</p>
+                <div class="brand-logos">
+                    <span>Nike</span>
+                    <span>Apple</span>
+                    <span>Samsung</span>
+                    <span>Sony</span>
+                    <span>Adidas</span>
+                    <span>Puma</span>
+                </div>
             </div>
         </div>
+
+        <!-- Features -->
+        <section id="features" class="features">
+            <div class="container">
+                <p class="section-tag reveal">Why Choose Us</p>
+                <h2 class="section-title reveal">Built for Modern Shoppers</h2>
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck-fast"></i>
+                        </div>
+                        <h3>Free Shipping</h3>
+                        <p>Free delivery on all orders over $50. Get your products delivered within 2-3 business days.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3>Secure Payment</h3>
+                        <p>Your payment information is processed securely with industry-standard encryption.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-rotate-left"></i>
+                        </div>
+                        <h3>Easy Returns</h3>
+                        <p>Not satisfied? Return within 30 days for a full refund. No questions asked.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Our dedicated support team is available around the clock to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="products">
+            <div class="container">
+                <p class="section-tag reveal">Our Collection</p>
+                <h2 class="section-title reveal">Featured Products</h2>
+                <div class="products-grid">
+                    <div class="product-card reveal" data-id="1" data-name="Red Sneakers" data-price="120" data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=400&fit=crop" alt="Red Sneakers - Limited Edition">
+                            <span class="product-badge">New</span>
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(128)</span>
+                            </div>
+                            <h3>Red Sneakers</h3>
+                            <p class="product-category">Footwear</p>
+                            <div class="product-footer">
+                                <span class="product-price">$120.00</span>
+                                <button class="btn-add-cart" aria-label="Add Red Sneakers to cart">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal" data-id="2" data-name="Classic Watch" data-price="85" data-image="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=200&h=200&fit=crop">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500&h=400&fit=crop" alt="Classic Watch - Premium Design">
+                            <span class="product-badge bestseller">Bestseller</span>
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(256)</span>
+                            </div>
+                            <h3>Classic Watch</h3>
+                            <p class="product-category">Accessories</p>
+                            <div class="product-footer">
+                                <span class="product-price">$85.00</span>
+                                <button class="btn-add-cart" aria-label="Add Classic Watch to cart">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal" data-id="3" data-name="Pro Headphones" data-price="150" data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=400&fit=crop" alt="Pro Headphones - Wireless Audio">
+                            <span class="product-badge">New</span>
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(89)</span>
+                            </div>
+                            <h3>Pro Headphones</h3>
+                            <p class="product-category">Electronics</p>
+                            <div class="product-footer">
+                                <span class="product-price">$150.00</span>
+                                <button class="btn-add-cart" aria-label="Add Pro Headphones to cart">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal" data-id="4" data-name="Leather Backpack" data-price="95" data-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&h=200&fit=crop">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=400&fit=crop" alt="Leather Backpack - Premium Craftsmanship">
+                            <span class="product-badge bestseller">Bestseller</span>
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(312)</span>
+                            </div>
+                            <h3>Leather Backpack</h3>
+                            <p class="product-category">Accessories</p>
+                            <div class="product-footer">
+                                <span class="product-price">$95.00</span>
+                                <button class="btn-add-cart" aria-label="Add Leather Backpack to cart">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal" data-id="5" data-name="Running Shoes" data-price="135" data-image="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=200&h=200&fit=crop">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=400&fit=crop" alt="Running Shoes - Performance Design">
+                            <span class="product-badge">New</span>
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(174)</span>
+                            </div>
+                            <h3>Running Shoes</h3>
+                            <p class="product-category">Footwear</p>
+                            <div class="product-footer">
+                                <span class="product-price">$135.00</span>
+                                <button class="btn-add-cart" aria-label="Add Running Shoes to cart">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal" data-id="6" data-name="Minimal Sunglasses" data-price="65" data-image="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=200&h=200&fit=crop">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=400&fit=crop" alt="Minimal Sunglasses - UV Protection">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(93)</span>
+                            </div>
+                            <h3>Minimal Sunglasses</h3>
+                            <p class="product-category">Accessories</p>
+                            <div class="product-footer">
+                                <span class="product-price">$65.00</span>
+                                <button class="btn-add-cart" aria-label="Add Minimal Sunglasses to cart">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Banner -->
+        <section class="promo-banner reveal">
+            <div class="container">
+                <div class="promo-content">
+                    <p class="promo-tag">Limited Time Offer</p>
+                    <h2>Get 30% Off Your First Order</h2>
+                    <p>Sign up for our newsletter and receive an exclusive discount on your first purchase.</p>
+                    <a href="#contact" class="btn-primary">Shop the Sale <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="promo-image">
+                    <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=600&h=400&fit=crop" alt="Summer sale collection">
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <p class="section-tag reveal">Testimonials</p>
+                <h2 class="section-title reveal">What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Absolutely love the quality of the products! The sneakers arrived quickly and exceeded my expectations. Will definitely order again."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Sarah M.">
+                            <div>
+                                <strong>Sarah M.</strong>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card featured reveal">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Best online shopping experience I've had. The customer service team was incredibly helpful when I needed to exchange my order. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="James R.">
+                            <div>
+                                <strong>James R.</strong>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"The watch I purchased is stunning. Premium craftsmanship at an unbeatable price. The packaging was also top-notch. 10/10 experience."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Emily K.">
+                            <div>
+                                <strong>Emily K.</strong>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter reveal">
+            <div class="container">
+                <div class="newsletter-content">
+                    <i class="fas fa-envelope-open-text newsletter-icon"></i>
+                    <h2>Stay in the Loop</h2>
+                    <p>Subscribe to our newsletter for exclusive deals, new arrivals, and insider-only discounts.</p>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                    <p class="newsletter-note"><i class="fas fa-lock"></i> No spam, unsubscribe anytime.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-overlay"></div>
+    <aside class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" aria-label="Close cart"><i class="fas fa-xmark"></i></button>
         </div>
-    </section>
+        <div class="cart-items">
+            <p class="cart-empty">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="total-price">$0.00</span>
+            </div>
+            <button class="btn-checkout">Checkout</button>
+        </div>
+    </aside>
 
     <footer id="contact" class="main-footer">
         <div class="footer-container">
-            <div class="footer-info">
-                <div class="logo" style="color: white;">Shop<span>Max</span></div>
+            <div class="footer-brand">
+                <div class="logo">Shop<span>Max</span></div>
                 <p>Leading the way in modern e-commerce. Your satisfaction is our priority.</p>
-                <ul class="contact-details" style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 15px;"><i class="fas fa-phone"></i> +20 123 456 789</li>
-                    <li style="margin-bottom: 15px;"><i class="fas fa-envelope"></i> info@shopmax.com</li>
-                    <li style="margin-bottom: 15px;"><i class="fas fa-map-marker-alt"></i> Mall of Egypt, cairo, Egypt
-                    </li>
+                <ul class="contact-details">
+                    <li><i class="fas fa-phone"></i> +20 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> info@shopmax.com</li>
+                    <li><i class="fas fa-location-dot"></i> Mall of Egypt, Cairo, Egypt</li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#features">Why Us</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
 
             <div class="footer-contact">
-                <h4>Contact Us</h4>
+                <h4>Get in Touch</h4>
                 <form onsubmit="return false;">
-                    <input type="email" placeholder="Your Email Address" required
-                        style="width: 100%; margin-bottom: 10px;">
-                    <textarea placeholder="How can we help you?" rows="4"
-                        style="width: 100%; margin-bottom: 10px;"></textarea>
-                    <button type="submit" class="btn-send" style="width: 100%; cursor: pointer;">Send Message</button>
+                    <div class="form-group">
+                        <label for="footer-email" class="visually-hidden">Email Address</label>
+                        <input type="email" id="footer-email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="footer-message" class="visually-hidden">Message</label>
+                        <textarea id="footer-message" placeholder="How can we help you?" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-send">Send Message</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 ShopMax Store. Built with SASS. All rights reserved.</p>
+            <div class="footer-bottom-content">
+                <p>&copy; 2026 ShopMax. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script>
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll reveal animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Wishlist toggle
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            if (btn.querySelector('.fa-heart')) {
+                btn.addEventListener('click', () => {
+                    const icon = btn.querySelector('i');
+                    icon.classList.toggle('far');
+                    icon.classList.toggle('fas');
+                    btn.classList.toggle('active');
+                });
+            }
+        });
+
+        // Cart
+        const cart = [];
+        const cartBadge = document.querySelector('.cart-badge');
+        const cartItemsContainer = document.querySelector('.cart-items');
+        const cartEmptyMsg = document.querySelector('.cart-empty');
+        const totalPriceEl = document.querySelector('.total-price');
+        const cartOverlay = document.querySelector('.cart-overlay');
+        const cartSidebar = document.querySelector('.cart-sidebar');
+        const cartCloseBtn = document.querySelector('.cart-close');
+        const cartFooterEl = document.querySelector('.cart-footer');
+
+        function updateCart() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartBadge.textContent = totalItems;
+
+            if (cart.length === 0) {
+                cartEmptyMsg.style.display = 'block';
+                cartFooterEl.style.display = 'none';
+                cartItemsContainer.querySelectorAll('.cart-item').forEach(el => el.remove());
+            } else {
+                cartEmptyMsg.style.display = 'none';
+                cartFooterEl.style.display = 'block';
+                renderCartItems();
+            }
+
+            const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            totalPriceEl.textContent = '$' + totalPrice.toFixed(2);
+        }
+
+        function renderCartItems() {
+            cartItemsContainer.querySelectorAll('.cart-item').forEach(el => el.remove());
+
+            cart.forEach(item => {
+                const el = document.createElement('div');
+                el.classList.add('cart-item');
+                el.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <span class="cart-item-price">$${item.price.toFixed(2)}</span>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button class="qty-btn qty-decrease" data-id="${item.id}">-</button>
+                        <span class="qty-value">${item.quantity}</span>
+                        <button class="qty-btn qty-increase" data-id="${item.id}">+</button>
+                    </div>
+                    <button class="cart-item-remove" data-id="${item.id}" aria-label="Remove ${item.name}">
+                        <i class="fas fa-trash-can"></i>
+                    </button>
+                `;
+                cartItemsContainer.appendChild(el);
+            });
+        }
+
+        function openCart() {
+            cartOverlay.classList.add('active');
+            cartSidebar.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            cartOverlay.classList.remove('active');
+            cartSidebar.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.btn-add-cart').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.product-card');
+                const id = card.dataset.id;
+                const name = card.dataset.name;
+                const price = parseFloat(card.dataset.price);
+                const image = card.dataset.image;
+
+                const existing = cart.find(item => item.id === id);
+                if (existing) {
+                    existing.quantity++;
+                } else {
+                    cart.push({ id, name, price, image, quantity: 1 });
+                }
+
+                btn.innerHTML = '<i class="fas fa-check"></i> Added';
+                btn.classList.add('added');
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fas fa-plus"></i> Add';
+                    btn.classList.remove('added');
+                }, 1000);
+
+                updateCart();
+                openCart();
+            });
+        });
+
+        cartItemsContainer.addEventListener('click', (e) => {
+            const id = e.target.dataset.id;
+            if (!id) return;
+
+            const item = cart.find(i => i.id === id);
+
+            if (e.target.classList.contains('qty-increase')) {
+                item.quantity++;
+            } else if (e.target.classList.contains('qty-decrease')) {
+                item.quantity--;
+                if (item.quantity <= 0) {
+                    cart.splice(cart.indexOf(item), 1);
+                }
+            } else if (e.target.closest('.cart-item-remove')) {
+                cart.splice(cart.indexOf(item), 1);
+            }
+
+            updateCart();
+        });
+
+        document.querySelector('.cart-icon').addEventListener('click', openCart);
+        cartCloseBtn.addEventListener('click', closeCart);
+        cartOverlay.addEventListener('click', closeCart);
     </script>
 
 </body>

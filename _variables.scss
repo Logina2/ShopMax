@@ -1,11 +1,14 @@
 $primary-color: #ff6b6b;
+$primary-hover: #ff3838;
 $dark-color: #2d3436;
 $text-grey: #636e72;
 $light-bg: #f8f9fa;
 $white: #ffffff;
+$border-light: #e9ecef;
 
 $transition: all 0.3s ease-in-out;
 $shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+$shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
 
 @mixin tablet {
     @media (max-width: 992px) {
